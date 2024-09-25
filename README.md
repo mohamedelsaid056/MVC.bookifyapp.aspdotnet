@@ -5,7 +5,7 @@
 graph TD
     A[Client] -->|HTTP| B(Web Application)
     B --> C{Authentication}
-    C -->|Admin| D[Book Management]
+    C -->|Admin| D[Book Management ,Rental Management]
     C -->|Admin| E[Rental Management]
     C -->|User| F[View Books]
     C -->|User| G[Rent Books]
@@ -14,7 +14,7 @@ graph TD
     I --> J[Email Notifications]
     I --> K[WhatsApp Notifications]
     B --> L[Serilog Logging]
-    M[(Database)] --> B
+    M[(Database SQL)] --> B
     M --> H
     N[Role Management] --> C
 ```

@@ -1,6 +1,6 @@
 # Bookify
 
-Bookify is a web application built with ASP.NET Core that manages book rentals and user accounts.
+Bookify is a robust ASP.NET Core web application designed for managing book rentals. It features user authentication, book management, and an automated rental system. With integrated Hangfire for background jobs, Serilog for logging, and support for WhatsApp and email notifications, Bookify offers a comprehensive solution for libraries or book rental services.
 
 ## Features
 
@@ -25,8 +25,8 @@ Bookify is a web application built with ASP.NET Core that manages book rentals a
 
 ### Prerequisites
 
-- .NET 6.0 SDK or later
-- SQL Server (or your preferred database supported by EF Core)
+- .NET 8.0 SDK or later
+- SQL Server 
 
 ### Installation
 
@@ -80,7 +80,7 @@ The application uses Hangfire to run the following recurring jobs:
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
 
-## License
+
 
 This project is licensed under the [MIT License](LICENSE).
 

@@ -1,3 +1,23 @@
+
+
+
+```mermaid
+graph TD
+    A[Client] -->|HTTP| B(Web Application)
+    B --> C{Authentication}
+    C -->|Admin| D[Book Management]
+    C -->|Admin| E[Rental Management]
+    C -->|User| F[View Books]
+    C -->|User| G[Rent Books]
+    B --> H[Hangfire Dashboard]
+    H -->|Scheduled Jobs| I[Background Tasks]
+    I --> J[Email Notifications]
+    I --> K[WhatsApp Notifications]
+    B --> L[Serilog Logging]
+    M[(Database)] --> B
+    M --> H
+    N[Role Management] --> C
+```
 # Bookify
 
 Bookify is a robust ASP.NET Core web application designed for managing book rentals. It features user authentication, book management, and an automated rental system. With integrated Hangfire for background jobs, Serilog for logging, and support for WhatsApp and email notifications, Bookify offers a comprehensive solution for libraries or book rental services.
@@ -84,7 +104,11 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 This project is licensed under the [MIT License](LICENSE).
 
+
+
 ## Acknowledgments
 
 - [Hangfire](https://www.hangfire.io/) for background job processing
 - [Serilog](https://serilog.net/) for structured logging
+
+

@@ -3,20 +3,44 @@
 
 ```mermaid
 graph TD
-    A[Client] -->|HTTP| B(Web Application)
-    B --> C{Authentication}
-    C -->|Admin| D[Book Management]
-    C -->|Admin| E[Rental Management]
-    C -->|User| F[View Books]
-    C -->|User| G[Rent Books]
-    B --> H[Hangfire Dashboard]
-    H -->|Scheduled Jobs| I[Background Tasks]
-    I --> J[Email Notifications]
-    I --> K[WhatsApp Notifications]
-    B --> L[Serilog Logging]
-    M[(Database)] --> B
-    M --> H
-    N[Role Management] --> C
+    A[Bookify] --> B[User Management]
+    A --> C[Authors]
+    A --> D[Subscribers]
+    A --> E[Books]
+    A --> F[Rentals]
+    A --> G[Search]
+
+    B --> B1[Add User]
+    B --> B2[Update User]
+    B --> B3[Delete User]
+    B --> B4[Manage User Roles]
+
+    C --> C1[Add Author]
+    C --> C2[Update Author]
+
+    D --> D1[Add Subscriber]
+    D --> D2[Send Welcome Email]
+    D --> D3[Update Subscriber]
+    D --> D4[Block Subscriber]
+    D --> D5[Subscriber Profile]
+    D --> D6[Subscriber Rental History]
+
+    E --> E1[Add Book]
+    E --> E2[Update Book]
+    E --> E3[Allow/Disallow Rentals]
+    E --> E4[Copies]
+    E4 --> E4a[Add Copy]
+    E4 --> E4b[Update Copy]
+    E4 --> E4c[Allow/Disallow Rentals]
+    E4 --> E4d[Copy Rental History]
+
+    F --> F1[Add Rental]
+    F --> F2[Send Rental Email]
+    F --> F3[Update Rental]
+    F --> F4[Cancel Rental]
+    F --> F5[Rental Returns]
+    F --> F6[Send Remainder Email]
+    F --> F7[Delay Penalties]
 ```
 # Bookify
 

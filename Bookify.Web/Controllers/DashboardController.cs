@@ -17,8 +17,10 @@
         {
             //var numberOfCopies = _context.BookCopies.Count(c => !c.IsDeleted);
             var numberOfCopies = _context.Books.Count(c => !c.IsDeleted);
+            //for making number of copies like that 
 
-            numberOfCopies = numberOfCopies <= 10 ? numberOfCopies : numberOfCopies / 10 * 10;
+            //numberOfCopies = numberOfCopies <= 10 ? numberOfCopies : (float)numberOfCopies / 10 * 10;
+            numberOfCopies = numberOfCopies <= 10 ? numberOfCopies : numberOfCopies / 10 * 10;  //same result if i use this --->> numberOfCopies = numberOfCopies <= 10 ? numberOfCopies : (int)numberOfCopies / 10 * 10;
 
             var numberOfsubscribers = _context.Subscribers.Count(c => !c.IsDeleted);
             var lastAddedBooks = _context.Books
@@ -34,21 +36,21 @@
                 .ThenInclude(b => b!.Author)
                 .GroupBy(c => new
                 {
-                    c.BookCopy!.BookId,
-                    c.BookCopy!.Book!.Title,
-                    c.BookCopy!.Book!.ImageThumbnailUrl,
-                    AuthorName = c.BookCopy!.Book!.Author!.Name
+                   BookId= c.BookCopy!.BookId,
+                   Title = c.BookCopy!.Book!.Title,
+                   ImageThumbnailUrl=c.BookCopy!.Book!.ImageThumbnailUrl,
+                   AuthorName = c.BookCopy!.Book!.Author!.Name
                 })
-                .Select(b => new
+                .Select(b => new //when we use group by we must use select plz review group by in entity framework
                 {
-                    b.Key.BookId,
+                    b.Key.BookId, // "key" is the name of gorup by and we have many groupby parameter in object then the key "nameof group by parameter" has many values
                     b.Key.Title,
                     b.Key.ImageThumbnailUrl,
                     b.Key.AuthorName,
-                    Count = b.Count()
+                    Count = b.Count()  //groupby has two porpertise when we use select "key and count"
                 })
-                .OrderByDescending(b => b.Count)
-                .Take(6)
+                .OrderByDescending(b => b.Count)//i will make order
+                .Take(6)// will take the bigest 6 values 
                 .Select(b => new BookViewModel
                 {
                     Id = b.BookId,

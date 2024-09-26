@@ -39,9 +39,12 @@ namespace Bookify.Web.Extensions
             // we will use one of thoses "dataprotection in default" bur hashid is package need nugut 
 
             services.AddDataProtection().SetApplicationName(nameof(Bookify));
+            //another way to use hashid need nuget not working with default
             services.AddSingleton<IHashids>(_ => new Hashids("f1nd1ngn3m0", minHashLength: 11));
+            //any where i can get information about the user is logged in app by using IUserClaims 
 
             services.AddScoped<IUserClaimsPrincipalFactory<ApplicationUser>, ApplicationUserClaimsPrincipalFactory>();
+
 
             services.AddTransient<IImageService, ImageService>();
             services.AddTransient<IEmailSender, EmailSender>();

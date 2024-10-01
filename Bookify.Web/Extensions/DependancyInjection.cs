@@ -72,6 +72,8 @@ namespace Bookify.Web.Extensions
 
             services.AddViewToHTML();
 
+            
+
             services.AddMvc(options =>
                 options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute())
             );

@@ -74,6 +74,7 @@
         [AjaxOnly]
         public IActionResult GetRentalsPerDay(DateTime? startDate, DateTime? endDate)
         {
+            var number = IEnumerable.range(10,15);
             startDate ??= DateTime.Today.AddDays(-29);
             endDate ??= DateTime.Today;
 

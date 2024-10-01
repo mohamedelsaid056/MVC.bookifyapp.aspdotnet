@@ -21,10 +21,10 @@ namespace Bookify.Web.Controllers
 
         public IActionResult Index()
         {
-            if (User.Identity!.IsAuthenticated)
+            if (User.Identity!.IsAuthenticated) // check if user is authenticated GO TO DASHBOARD controller
                 return RedirectToAction(nameof(Index), "Dashboard");
 
-            var lastAddedBooks = _context.Books
+            var lastAddedBooks = _context.Books 
                                     .Include(b => b.Author)
                                     .Where(b => !b.IsDeleted)
                                     .OrderByDescending(b => b.Id)

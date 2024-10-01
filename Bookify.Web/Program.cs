@@ -13,13 +13,21 @@ var builder = WebApplication.CreateBuilder(args);
 // we make a class containing all services configration in section extensions have a class called dependency injection 
 builder.Services.AddBookifyServices(builder);// check plz extensions section , class dependency injection 
 
+
+// if i need to remove "[antiforgerytoken]" from all controllers in anu action "post put delete patch" expect "post"  i can add it here in services
+// here we add [antiforgerytoken] to all controllers in all actions except get , if i have any action 
+//i need it do't has [antiforgerytoken] i will use [ignoreantiForgeryToken] in action
+builder.services.AddMvc(options =>
+                options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute())
+            );
+
 //Add Serilog
 Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration).CreateLogger();
 builder.Host.UseSerilog();
 
 var app = builder.Build();
 
-//custom  middleware 
+//custom  middleware for closing my application in iframe in any html code 
 app.Use(async (context, next) =>
 {
     context.Response.Headers.Add("X-Frame-Options", "Deny");
@@ -34,14 +42,14 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
-    app.UseStatusCodePagesWithReExecute("/Home/Error", "?statusCode={0}");
+    app.UseStatusCodePagesWithReExecute("/Home/Error", "?statusCode={0}"); // for error page different statecode except 404  and 500 see more in doc
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+// if i  need to make all cookies maked as Secure use this middleware  
 //app.UseCookiePolicy(new CookiePolicyOptions
 //{
 //    Secure = CookieSecurePolicy.Always
@@ -109,6 +117,37 @@ var hangfireTasks = new HangfireTasks(dbContext, webHostEnvironment, whatsAppCli
 RecurringJob.AddOrUpdate(() => hangfireTasks.PrepareExpirationAlert(), "0 14 * * *");
 RecurringJob.AddOrUpdate(() => hangfireTasks.RentalsExpirationAlert(), "0 14 * * *");
 
+
+
+
+
+// this is for sending userid and uername in log error "need to see serilog section in configration appsettings.json"
+
+//  {
+//         "Name": "MSSqlServer",
+//         "Args": {
+//           "connectionString": "Server=(localdb)\\mssqllocaldb;Database=Bookify;Trusted_Connection=True;MultipleActiveResultSets=true",
+//           "tableName": "ErrorLogs",
+//           "schemaName": "logging",
+//           "autoCreateSqlTable": true,
+//           "ColumnOptionsSection": {
+//             //"removeStandardColumns": [ "MessageTemplate" ],
+//             "customColumns": [
+//               {
+//                 "ColumnName": "UserId",
+//                 "DataType": "nvarchar",
+//                 "DataLength": "450"
+//               },
+//               {
+//                 "ColumnName": "UserName",
+//                 "DataType": "nvarchar",
+//                 "DataLength": "256"
+//               }
+//             ]
+//           }
+//         },
+//         "restrictedToMinimumLevel": "Error"
+//       }
 app.Use(async (context, next) =>
 {
     LogContext.PushProperty("UserId", context.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);

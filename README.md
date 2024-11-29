@@ -95,6 +95,58 @@ Bookify is a robust ASP.NET Core web application designed for managing book rent
 -  **WhatsApp API** (via IWhatsAppClient)
 
 
+## 🔐 Security
+
+### Authentication
+- ASP.NET Core Identity
+- Custom claim providers
+- **User Management**: Complete user lifecycle management
+- **Password Hashing**: Secure password storage using industry-standard hashing
+- **Account Confirmation**: Email verification system
+- **Password Recovery**: Secure password reset functionality
+- 
+
+### Authorization
+#### 1. Role-Based Access Control (RBAC)
+
+
+```csharp
+public static class AppRoles
+{
+    public const string Admin = "Admin";
+    public const string Reception = "Reception";
+    public const string Archive = "Archive";
+    public const string User = "User";
+}
+
+// Controller-level authorization
+[Authorize(Roles = AppRoles.Reception)]
+public class RentalsController : Controller
+{
+    // Only the Reception role can access this controller
+}
+
+// Action-level authorization
+[Authorize(Roles = $"{AppRoles.Admin},{AppRoles.Archive}")]
+public IActionResult ManageBooks()
+{
+    // Only Admin and Archive roles can access this action
+}
+```
+
+
+####  Data Protection
+using Data protection that built in library .NET 
+using extra package "hashids"
+
+
+#### Security Best Practices
+- **HTTPS Enforcement**: All communications are encrypted using SSL/TLS
+- **Anti-forgery Tokens**: Protection against CSRF attacks
+- **XSS Prevention**: Content security policies and input sanitization
+- **SQL Injection Prevention**: Use of parameterized queries and EF Core
+- **Secure Headers**: Implementation of security headers (HSTS, X-Frame-Options, etc.)
+- **Audit Logging**: Tracking of security-relevant events
 
 
 
@@ -169,5 +221,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 - [Hangfire](https://www.hangfire.io/) for background job processing
 - [Serilog](https://serilog.net/) for structured logging
+
+<div align="center">
+Made with ❤️ by the Bookify Team
+</div>
 
 

@@ -3,13 +3,13 @@
 
 <div align="center">
 
-![Bookify Logo](https://github.com/user-attachments/assets/cd01dc09-1f43-4dd3-a2ac-95b7cc745eaf)
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![.NET Core](https://img.shields.io/badge/.NET%20Core-7.0-purple.svg)](https://dotnet.microsoft.com/download)
-[![EF Core](https://img.shields.io/badge/EF%20Core-7.0-blue.svg)](https://docs.microsoft.com/ef/core)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/yourusername/bookify)
+[![.NET Core](https://img.shields.io/badge/.NET%20Core-8.0-purple.svg)](https://dotnet.microsoft.com/download)
+[![EF Core](https://img.shields.io/badge/EF%20Core-8.0-blue.svg)](https://docs.microsoft.com/ef/core)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/mohamedelsaid056/MVC.bookifyapp.aspdotnet)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/yourusername/bookify/graphs/commit-activity)
+
+![Bookify Logo](https://github.com/user-attachments/assets/3184d889-057b-4257-8a5d-1e452d6356b5)
 
 </div>
 
@@ -65,24 +65,40 @@ Bookify is an enterprise-grade book rental management system designed to streaml
 
 Bookify is a robust ASP.NET Core web application designed for managing book rentals. It features user authentication, book management, and an automated rental system. With integrated Hangfire for background jobs, Serilog for logging, and support for WhatsApp and email notifications, Bookify offers a comprehensive solution for libraries or book rental services.
 
-## Features
+### Core Features
+- 📖 Complete book inventory management
+- 📋 Book copy tracking system
+- 👥 Subscriber management
+- 🔄 Rental processing
+- 📊 Reports and analytics
+- 👮 Role-based access control
+- 🖼️ Image management with Cloudinary
+- 📧 Email notifications
+- 📱 WhatsApp integration
+- 📑 Background job processing with Hangfire
+- 📋 Logging with Serilog
 
-- User authentication and authorization using native identity pages 
-- Book management
-- Rental system
-- Automated tasks using Hangfire (background jobs)
-- Logging with Serilog
-- WhatsApp integration
-- Email notifications
+## 🔧 Technology Stack
 
-## Technologies Used
+- **Backend Framework**: ASP.NET Core 8.0
+- **ORM**: Entity Framework Core
+- **Database**: SQL Server
+- **Authentication**: ASP.NET Core Identity
+- **Frontend**: 
+  - Bootstrap
+  - jQuery
+  - javascript for Ajax calls 
+  - DataTables "both client and server"
+- **File Storage**: Cloudinary ,
+- **Background Jobs**: Hangfire
+- **Mapping**: AutoMapper, manual mapping
+-  **WhatsApp API** (via IWhatsAppClient)
 
-- ASP.NET Core
-- Entity Framework Core
-- Identity Framework
-- Hangfire
-- Serilog
-- WhatsApp API (via IWhatsAppClient)
+
+
+
+
+
 
 ## Getting Started
 

@@ -33,19 +33,6 @@ graph TD
 
 
 
-## 📑 Table of Contents
-- [Overview](#-overview)
-- [System Architecture](#-system-architecture)
-- [Features](#-Core-Features)
-- [Technology Stack](#-technology-stack)
-- [Setup Instructions](#-setup-instructions)
-- [Project Structure](#-project-structure)
-- [Security](#-security)
-- [Contributing](#-contributing)
-- [Getting Started](#-Getting-Started).
-- [Glimpse of the working solution](#-Glimpse-of-the-working-solution)
-
-
 
 
 ## 📋 Overview

@@ -1,5 +1,17 @@
 
+# 📚 Bookify - Advanced Book Rental Management System
 
+<div align="center">
+
+![Bookify Logo](https://github.com/user-attachments/assets/cd01dc09-1f43-4dd3-a2ac-95b7cc745eaf)
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![.NET Core](https://img.shields.io/badge/.NET%20Core-7.0-purple.svg)](https://dotnet.microsoft.com/download)
+[![EF Core](https://img.shields.io/badge/EF%20Core-7.0-blue.svg)](https://docs.microsoft.com/ef/core)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/yourusername/bookify)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/yourusername/bookify/graphs/commit-activity)
+
+</div>
 
 ```mermaid
 graph TD
@@ -19,19 +31,7 @@ graph TD
     N[Role Management] --> C
 ```
 
-# 📚 Bookify - Advanced Book Rental Management System
 
-<div align="center">
-
-![Bookify Logo](path/to/your/logo.png)
-
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![.NET Core](https://img.shields.io/badge/.NET%20Core-7.0-purple.svg)](https://dotnet.microsoft.com/download)
-[![EF Core](https://img.shields.io/badge/EF%20Core-7.0-blue.svg)](https://docs.microsoft.com/ef/core)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/yourusername/bookify)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/yourusername/bookify/graphs/commit-activity)
-
-</div>
 
 ## 📑 Table of Contents
 - [Overview](#-overview)

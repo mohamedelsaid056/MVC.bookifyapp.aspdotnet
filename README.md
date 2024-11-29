@@ -41,12 +41,12 @@ graph TD
 - [Setup Instructions](#-setup-instructions)
 - [Project Structure](#-project-structure)
 - [Security](#-security)
-- [API Documentation](#-api-documentation)
 - [Contributing](#-contributing)
-- [Deployment](#-deployment)
-- [Troubleshooting](#-troubleshooting)
-- [License](#-license)
-- [Support](#-support)
+- [Getting Started](#-Getting-Started).
+- [Glimpse of the working solution](#-Glimpse-of-the-working-solution)
+
+
+
 
 ## 📋 Overview
 
@@ -207,12 +207,7 @@ using extra package "hashids"
 - Serilog is configured to read from the configuration file.
 - Hangfire dashboard is accessible at `/hangfire` and is restricted to admin users only.
 
-## Scheduled Tasks
 
-The application uses Hangfire to run the following recurring jobs:
-
-- `PrepareExpirationAlert`: Runs daily at 2 PM
-- `RentalsExpirationAlert`: Runs daily at 2 PM
 
 ## Glimpse of the working solution
 Demo Link: -http://mohamedbookifyapp1.runasp.net/

@@ -36,7 +36,7 @@ graph TD
 ## 📑 Table of Contents
 - [Overview](#-overview)
 - [System Architecture](#-system-architecture)
-- [Features](#-features)
+- [Features](#-Core-Features)
 - [Technology Stack](#-technology-stack)
 - [Setup Instructions](#-setup-instructions)
 - [Project Structure](#-project-structure)
@@ -65,7 +65,7 @@ Bookify is an enterprise-grade book rental management system designed to streaml
 
 Bookify is a robust ASP.NET Core web application designed for managing book rentals. It features user authentication, book management, and an automated rental system. With integrated Hangfire for background jobs, Serilog for logging, and support for WhatsApp and email notifications, Bookify offers a comprehensive solution for libraries or book rental services.
 
-### Core Features
+## Core Features
 - 📖 Complete book inventory management
 - 📋 Book copy tracking system
 - 👥 Subscriber management

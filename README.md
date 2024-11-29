@@ -204,9 +204,12 @@ using extra package "hashids"
 
 
 ## Glimpse of the working solution
-Demo Link: -http://mohamedbookifyapp1.runasp.net/
-username : admin@bookify.com
-password : P@ssword123
+
+**Demo Link**: -http://mohamedbookifyapp1.runasp.net/
+
+**username** : admin@bookify.com
+
+**password** : P@ssword123
 
 
 ![1](https://github.com/user-attachments/assets/18dbb497-25b7-412c-b905-1c126afcba39)

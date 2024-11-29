@@ -52,18 +52,25 @@ Bookify is an enterprise-grade book rental management system designed to streaml
 
 Bookify is a robust ASP.NET Core web application designed for managing book rentals. It features user authentication, book management, and an automated rental system. With integrated Hangfire for background jobs, Serilog for logging, and support for WhatsApp and email notifications, Bookify offers a comprehensive solution for libraries or book rental services.
 
-## Core Features
-- 📖 Complete book inventory management
-- 📋 Book copy tracking system
-- 👥 Subscriber management
+## 📚 Core Features
+
+### Book Management
+- 📖 Inventory tracking
+- 🏷️ Categorization
+- 📸 Image management
+- 📊 Stock monitoring
+
+### Rental System
 - 🔄 Rental processing
-- 📊 Reports and analytics
-- 👮 Role-based access control
-- 🖼️ Image management with Cloudinary
-- 📧 Email notifications
-- 📱 WhatsApp integration
-- 📑 Background job processing with Hangfire
-- 📋 Logging with Serilog
+- ⏰ Due date management
+- 💰 Fine calculation
+- 📱 SMS/WhatsApp notifications
+
+### User Management
+- 👥 Role-based access
+- 🔐 Secure authentication
+- 📧 Email verification
+- 👤 Profile management
 
 ## 🔧 Technology Stack
 
@@ -198,6 +205,8 @@ using extra package "hashids"
 
 ## Glimpse of the working solution
 Demo Link: -http://mohamedbookifyapp1.runasp.net/
+username : admin@bookify.com
+password : P@ssword123
 
 
 ![1](https://github.com/user-attachments/assets/18dbb497-25b7-412c-b905-1c126afcba39)

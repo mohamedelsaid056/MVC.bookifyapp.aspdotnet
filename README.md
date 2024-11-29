@@ -155,15 +155,15 @@ using extra package "hashids"
 ## Getting Started
 
 ### Prerequisites
-
-- .NET 8.0 SDK or later
-- SQL Server 
+- .NET 8.0 SDK
+- SQL Server
+- Visual Studio 2022 (recommended) or VS Code
 
 ### Installation
 
 1. Clone the repository
    ```
-   git clone https://github.com/yourusername/Bookify.git
+   git clone https://github.com/mohamedelsaid056/MVC.bookifyapp.aspdotnet
    ```
 
 2. Navigate to the project directory
@@ -177,13 +177,26 @@ using extra package "hashids"
    ```
 
 4. Update the connection string in `appsettings.json` to point to your database
+ ```
+   json
+{
+"CloudinarySettings": {
+"Cloud": "your_cloud_name",
+"ApiKey": "your_api_key",
+"ApiSecret": "your_api_secret"
+},
+"MailSettings": {
+// Configure your email settings
+}
+}
+ ```
 
-5. Apply migrations to create the database
+6. Apply migrations to create the database
    ```
    dotnet ef database update
    ```
 
-6. Run the application
+7. Run the application
    ```
    dotnet run
    ```
@@ -201,26 +214,23 @@ The application uses Hangfire to run the following recurring jobs:
 - `PrepareExpirationAlert`: Runs daily at 2 PM
 - `RentalsExpirationAlert`: Runs daily at 2 PM
 
-## Security
-
-- HTTPS is enforced in production
-- X-Frame-Options header is set to "Deny"
-- Custom authorization is implemented for the Hangfire dashboard
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
+## Glimpse of the working solution
+Demo Link: -http://mohamedbookifyapp1.runasp.net/
 
 
+![1](https://github.com/user-attachments/assets/18dbb497-25b7-412c-b905-1c126afcba39)
 
-This project is licensed under the [MIT License](LICENSE).
+![2](https://github.com/user-attachments/assets/15d61640-9e67-4beb-945e-806dc0af4350)
+
+![3](https://github.com/user-attachments/assets/135fd1b2-b842-4f8d-b07e-3cc33bc70bc0)
+
+![user](https://github.com/user-attachments/assets/0fc4c671-66fa-427c-98ed-eb2de401fc9e)
+
+![search](https://github.com/user-attachments/assets/99271bbb-04ca-4778-8098-71ee3c243f11)
 
 
+![report ](https://github.com/user-attachments/assets/15528aa4-959c-4e31-8a8a-7e658e2826e2)
 
-## Acknowledgments
-
-- [Hangfire](https://www.hangfire.io/) for background job processing
-- [Serilog](https://serilog.net/) for structured logging
 
 <div align="center">
 Made with ❤️ by the Bookify Team

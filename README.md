@@ -18,7 +18,50 @@ graph TD
     M --> H
     N[Role Management] --> C
 ```
-# Bookify
+
+# 📚 Bookify - Advanced Book Rental Management System
+
+<div align="center">
+
+![Bookify Logo](path/to/your/logo.png)
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![.NET Core](https://img.shields.io/badge/.NET%20Core-7.0-purple.svg)](https://dotnet.microsoft.com/download)
+[![EF Core](https://img.shields.io/badge/EF%20Core-7.0-blue.svg)](https://docs.microsoft.com/ef/core)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/yourusername/bookify)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/yourusername/bookify/graphs/commit-activity)
+
+</div>
+
+## 📑 Table of Contents
+- [Overview](#-overview)
+- [System Architecture](#-system-architecture)
+- [Features](#-features)
+- [Technology Stack](#-technology-stack)
+- [Setup Instructions](#-setup-instructions)
+- [Project Structure](#-project-structure)
+- [Security](#-security)
+- [API Documentation](#-api-documentation)
+- [Contributing](#-contributing)
+- [Deployment](#-deployment)
+- [Troubleshooting](#-troubleshooting)
+- [License](#-license)
+- [Support](#-support)
+
+## 📋 Overview
+
+Bookify is an enterprise-grade book rental management system designed to streamline library operations and enhance user experience. The system provides comprehensive solutions for book inventory management, subscriber handling, rental processing, and administrative operations.
+
+### Key Benefits
+- 🎯 Streamlined rental operations
+- 📊 Advanced reporting and analytics
+- 🔐 Secure user authentication
+- 📱 Modern, responsive interface
+- 🔄 Real-time updates
+- 📈 Scalable architecture
+
+## 🏗 System Architecture
+
 
 Bookify is a robust ASP.NET Core web application designed for managing book rentals. It features user authentication, book management, and an automated rental system. With integrated Hangfire for background jobs, Serilog for logging, and support for WhatsApp and email notifications, Bookify offers a comprehensive solution for libraries or book rental services.
 
